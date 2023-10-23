@@ -4,9 +4,10 @@ import "./RightSidebar.css";
 
 const RightSidebarModule = () => {
   const ref = useRef(null);
-  useEffect(() => {
-    mount(ref.current);  
-  }, []);   
+   setTimeout(() => {
+    mount(ref.current); 
+   }, 500); 
+  
   return <div className="right-sidebar-module" ref={ref} />;
 };
 
