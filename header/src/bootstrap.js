@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const mount = (el) => {
-const root = createRoot(document.querySelector("#root"));
+const root = createRoot(el);
     root.render(<React.StrictMode>
         <App />
       </React.StrictMode>);
