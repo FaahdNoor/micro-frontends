@@ -5,17 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const mount = (el) => {
-const root = createRoot(el);
+    const root = createRoot(el);
     root.render(<React.StrictMode>
         <App />
-      </React.StrictMode>);
-  };
+    </React.StrictMode>);
+};
 
-if (process.env.NODE_ENV === "development") {
-    const rootNode = document.querySelector("#root");
-    if (rootNode) {
-        mount(rootNode);
-    }
+const rootNode = document.querySelector("#root");
+if (rootNode) {
+    mount(rootNode);
 }
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

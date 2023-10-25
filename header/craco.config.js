@@ -7,7 +7,7 @@ module.exports = {
           plugin: {
               overrideCracoConfig: ({ cracoConfig, pluginOptions, context: { env, paths } }) => { return cracoConfig; },
               overrideWebpackConfig: ({ webpackConfig, cracoConfig, pluginOptions, context: { env, paths } }) => { 
-                webpackConfig.output.publicPath = "auto";
+                webpackConfig.output.publicPath = "/";
 
                 webpackConfig.plugins = [
                   ...webpackConfig.plugins,
