@@ -1,0 +1,27 @@
+{
+  "name": "micro-front-end-react-application",
+  "workspaces": [
+    "app",
+    "footer",
+    "header",
+    "left-sidebar",
+    "right-sidebar"
+  ],
+  "version": "1.0.0",
+  "description": "workspace for micro-front-ends",
+  "main": "index.js",
+  "scripts": {
+    "start-app": "npm run start --workspace=app --if-present",
+    "start-footer": "npm run start --workspace=footer --if-present",
+    "start-header": "npm run start --workspace=header --if-present",
+    "start-left": "npm run start --workspace=left-sidebar --if-present",
+    "start-right": "npm run start --workspace=right-sidebar --if-present",
+    "start": "concurrently \"npm run start-right\" \"npm run start-footer\" \"npm run start-header\" \"npm run start-left\" \"npm run start-app\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
