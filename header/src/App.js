@@ -1,12 +1,15 @@
 import './App.css';
-import {ReactComponent as ReactLogo} from "./logo.svg"
+import { ReactComponent as ReactLogo } from "./logo.svg"
 function App() {
   return (
     <div className="header">
+      <h1 className="text-3xl font-bold underline">
         Header Application in
-        <ReactLogo className="react-logo1"/>
+
+      </h1>
+      <ReactLogo className="react-logo1" />
     </div>
-    
+
   );
 }
 
