@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { ErrorBoundary } from "react-error-boundary";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -7,7 +8,9 @@ import reportWebVitals from './reportWebVitals';
 const root = createRoot(document.getElementById('host-app'))
 root.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>
 );
 
